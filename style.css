@@ -61,9 +61,9 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* permite que elementos quebrem linha se precisar */
 }
 
+/* Logo */
 .header .logo {
     color: var(--light-neutral);
     text-decoration: none;
@@ -71,11 +71,10 @@ h3 {
     font-weight: bold;
 }
 
-/* NAV MENU */
+/* Menu normal */
 .nav-menu ul {
     list-style: none;
     display: flex;
-    flex-wrap: wrap; /* permite quebrar linha se muito pequeno */
 }
 
 .nav-menu ul li a {
@@ -83,12 +82,26 @@ h3 {
     text-decoration: none;
     padding: 10px 15px;
     transition: background-color 0.3s;
-    white-space: nowrap;
 }
 
 .nav-menu ul li a:hover {
     background-color: var(--green-calming);
     color: var(--blue-professional);
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: var(--light-neutral);
+    margin: 4px 0;
+    transition: 0.4s;
 }
 
 /* HERO */
@@ -235,26 +248,23 @@ h3 {
 
 /* RESPONSIVO */
 @media (max-width: 768px) {
-    .header .logo {
-        font-size: 1.2em; /* diminui logo no celular */
-    }
-
     .nav-menu ul {
-        justify-content: center; /* centraliza os botões */
+        display: none;
+        flex-direction: column;
+        background-color: var(--blue-professional);
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        border-radius: 5px;
+        padding: 10px 0;
     }
 
-    .nav-menu ul li a {
-        padding: 8px 10px; /* reduz padding para caber na tela */
-        font-size: 0.9em; /* diminui fonte dos links */
+    .nav-menu ul.show {
+        display: flex;
     }
 
-    .hero {
-        padding: 60px 20px; /* ajusta padding do hero */
-    }
-
-    .cta-buttons .btn {
-        padding: 12px 20px;
-        font-size: 0.9em;
-        margin: 5px;
+    .hamburger {
+        display: flex;
     }
 }
