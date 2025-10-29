@@ -14,6 +14,12 @@
     font-family: Arial, sans-serif;
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
 body {
     background-color: var(--light-neutral);
     color: var(--dark-grey);
@@ -61,6 +67,7 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .header .logo {
@@ -68,26 +75,35 @@ h3 {
     text-decoration: none;
     font-size: 1.5em;
     font-weight: bold;
+    white-space: nowrap;
 }
 
 .nav-menu ul {
     list-style: none;
     display: flex;
-    flex-wrap: nowrap; /* impede quebra de linha */
-    overflow-x: auto;  /* permite rolagem horizontal se não couber */
-    -webkit-overflow-scrolling: touch; /* rolagem suave no iPhone */
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 5px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
 }
 
 .nav-menu ul li {
-    flex: 0 0 auto; /* mantém os itens lado a lado */
+    flex: 1 1 auto;
+    text-align: center;
+    min-width: 80px;
 }
 
 .nav-menu ul li a {
     color: var(--light-neutral);
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 10px 10px;
+    display: block;
+    font-size: 0.9em;
     transition: background-color 0.3s;
-    white-space: nowrap; /* impede quebra de texto */
+    white-space: nowrap;
 }
 
 .nav-menu ul li a:hover {
@@ -131,7 +147,6 @@ h3 {
     background-color: #E6D298;
 }
 
-/* ALTERAÇÃO PARA "COMO AJUDAR" IGUAL AO "FALE CONOSCO" */
 .cta-buttons .btn-secondary {
     background-color: var(--yellow-welcoming);
     color: var(--dark-grey);
@@ -172,6 +187,7 @@ h3 {
     transform: translateY(-5px);
 }
 
+/* METODOLOGIA */
 .methodology-list ul {
     list-style: none;
     margin-top: 20px;
@@ -238,24 +254,31 @@ h3 {
     padding: 20px 0;
 }
 
-/* --- CORREÇÃO FINAL PARA CELULAR: BLOQUEIA ROLAGEM LATERAL E AJUSTA LARGURA --- */
-html, body {
-    overflow-x: hidden !important;
-    width: 100%;
-    max-width: 100%;
-}
+/* CORREÇÃO MOBILE */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.container, .header, .hero, .section {
-    max-width: 100%;
-    overflow-x: hidden;
-}
+    .nav-menu ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 
-.nav-menu ul {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-}
+    .nav-menu ul li {
+        flex: 0 1 auto;
+    }
 
-.nav-menu ul li a {
-    white-space: nowrap;
+    .hero {
+        padding: 60px 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
 }
