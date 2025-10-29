@@ -14,12 +14,6 @@
     font-family: Arial, sans-serif;
 }
 
-html, body {
-    overflow-x: hidden;
-    width: 100%;
-    max-width: 100%;
-}
-
 body {
     background-color: var(--light-neutral);
     color: var(--dark-grey);
@@ -67,7 +61,7 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* permite que elementos quebrem linha se precisar */
 }
 
 .header .logo {
@@ -75,33 +69,19 @@ h3 {
     text-decoration: none;
     font-size: 1.5em;
     font-weight: bold;
-    white-space: nowrap;
 }
 
+/* NAV MENU */
 .nav-menu ul {
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: 5px;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    max-width: 100%;
-}
-
-.nav-menu ul li {
-    flex: 1 1 auto;
-    text-align: center;
-    min-width: 80px;
+    flex-wrap: wrap; /* permite quebrar linha se muito pequeno */
 }
 
 .nav-menu ul li a {
     color: var(--light-neutral);
     text-decoration: none;
-    padding: 10px 10px;
-    display: block;
-    font-size: 0.9em;
+    padding: 10px 15px;
     transition: background-color 0.3s;
     white-space: nowrap;
 }
@@ -187,7 +167,6 @@ h3 {
     transform: translateY(-5px);
 }
 
-/* METODOLOGIA */
 .methodology-list ul {
     list-style: none;
     margin-top: 20px;
@@ -254,31 +233,28 @@ h3 {
     padding: 20px 0;
 }
 
-/* CORREÇÃO MOBILE */
+/* RESPONSIVO */
 @media (max-width: 768px) {
-    .header .container {
-        flex-direction: column;
-        align-items: center;
+    .header .logo {
+        font-size: 1.2em; /* diminui logo no celular */
     }
 
     .nav-menu ul {
-        justify-content: center;
-        flex-wrap: wrap;
+        justify-content: center; /* centraliza os botões */
     }
 
-    .nav-menu ul li {
-        flex: 0 1 auto;
+    .nav-menu ul li a {
+        padding: 8px 10px; /* reduz padding para caber na tela */
+        font-size: 0.9em; /* diminui fonte dos links */
     }
 
     .hero {
-        padding: 60px 20px;
+        padding: 60px 20px; /* ajusta padding do hero */
     }
 
-    h1 {
-        font-size: 2em;
-    }
-
-    h2 {
-        font-size: 1.5em;
+    .cta-buttons .btn {
+        padding: 12px 20px;
+        font-size: 0.9em;
+        margin: 5px;
     }
 }
