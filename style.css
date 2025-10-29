@@ -20,6 +20,11 @@ body {
     line-height: 1.6;
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -61,6 +66,7 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Permite quebrar linhas em telas pequenas */
 }
 
 .header .logo {
@@ -68,11 +74,14 @@ h3 {
     text-decoration: none;
     font-size: 1.5em;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .nav-menu ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza o menu no mobile */
 }
 
 .nav-menu ul li a {
@@ -91,17 +100,19 @@ h3 {
 .hero {
     background-color: var(--blue-professional);
     color: var(--light-neutral);
-    padding: 100px 0;
+    padding: 100px 20px;
     text-align: center;
 }
 
 .hero h2 {
     color: var(--yellow-welcoming);
+    font-size: 1.8em;
 }
 
 .hero p {
-    max-width: 700px;
+    max-width: 100%;
     margin: 20px auto;
+    padding: 0 10px;
 }
 
 .cta-buttons .btn {
@@ -114,28 +125,13 @@ h3 {
     transition: background-color 0.3s;
 }
 
-.cta-buttons .btn-primary {
-    background-color: var(--yellow-welcoming);
-    color: var(--dark-grey);
-}
-
-.cta-buttons .btn-primary:hover {
-    background-color: #E6D298;
-}
-
-/* ALTERAÇÃO PARA "COMO AJUDAR" IGUAL AO "FALE CONOSCO" */
+.cta-buttons .btn-primary,
 .cta-buttons .btn-secondary {
     background-color: var(--yellow-welcoming);
     color: var(--dark-grey);
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    padding: 15px 30px;
-    margin: 10px;
-    display: inline-block;
-    transition: background-color 0.3s;
 }
 
+.cta-buttons .btn-primary:hover,
 .cta-buttons .btn-secondary:hover {
     background-color: #E6D298;
 }
@@ -228,4 +224,43 @@ h3 {
     color: var(--light-neutral);
     text-align: center;
     padding: 20px 0;
+}
+
+/* --- RESPONSIVIDADE MOBILE --- */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+
+    .hero {
+        padding: 60px 10px;
+    }
+
+    .cta-buttons .btn {
+        padding: 12px 25px;
+        margin: 5px;
+    }
+
+    .services-grid, .help-options {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header .container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
