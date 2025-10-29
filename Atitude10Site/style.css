@@ -1,0 +1,147 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Header */
+header {
+  background-color: #1E3A8A;
+  color: white;
+  padding: 20px 0;
+}
+header .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 600;
+}
+header .botao-header {
+  background-color: #F59E0B;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+/* Banner */
+.banner {
+  background-color: #2563EB;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+.banner h2 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+.banner p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+.banner .botao {
+  background-color: #F59E0B;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* Seções */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+section h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #1E3A8A;
+}
+
+/* Cards Atividades */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.card {
+  background-color: white;
+  color: #1E3A8A;
+  width: 250px;
+  padding: 25px 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.card i {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+/* FAQ */
+.faq-item {
+  margin-bottom: 20px;
+  text-align: left;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.faq-item h3 {
+  color: #F59E0B;
+  margin-bottom: 5px;
+}
+
+/* Contato */
+.botoes-contato {
+  margin: 20px 0;
+}
+.botao {
+  display: inline-block;
+  padding: 12px 25px;
+  margin: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 700;
+  color: white;
+}
+.botao.whatsapp { background-color: #25D366; }
+.botao.instagram { background: linear-gradient(45deg, #C13584, #FCAF45); }
+
+/* Footer */
+footer {
+  background-color: #1E3A8A;
+  padding: 20px 0;
+  color: white;
+  text-align: center;
+}
+
+/* Responsividade */
+@media(max-width: 768px){
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
