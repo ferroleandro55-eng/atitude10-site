@@ -1,108 +1,152 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projeto Social Atitude 10</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Social Nota 10 - NAPBI</title>
+    <!-- Vincula o arquivo CSS para estilização -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <h1>Projeto Social Atitude 10</h1>
-      <nav>
-        <a href="#sobre">Sobre</a>
-        <a href="#atividades">Atividades</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contato" class="botao-header">Contato</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Banner -->
-  <section class="banner">
-    <div class="container">
-      <h2>Aprendizado personalizado e desenvolvimento completo</h2>
-      <p>Português, Matemática e Psicopedagogia adaptados ao ritmo de cada aluno.</p>
-      <a href="#contato" class="botao">Agende uma Aula</a>
-    </div>
-  </section>
-
-  <!-- Sobre -->
-  <section id="sobre">
-    <div class="container">
-      <h2>Sobre o Projeto</h2>
-      <p>Somos psicopedagogos e terapeutas de alta performance, ajudando todos que sentem dificuldades ou têm interesse em aprender de forma personalizada. Adaptamos nossas aulas para que cada pessoa aprenda no seu próprio ritmo, oferecendo também avaliações psicopedagógicas detalhadas.</p>
-    </div>
-  </section>
-
-  <!-- Atividades -->
-  <section id="atividades">
-    <div class="container">
-      <h2>Atividades Desenvolvidas</h2>
-      <div class="cards">
-        <div class="card">
-          <i class="fas fa-book"></i>
-          <h3>Português</h3>
-          <p>Leitura, sons das sílabas e escrita.</p>
+    
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">NAPBI</a>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#metodologia">Metodologia</a></li>
+                    <li><a href="#ajudar">Como Ajudar</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="card">
-          <i class="fas fa-calculator"></i>
-          <h3>Matemática</h3>
-          <p>Soma, subtração, multiplicação e divisão.</p>
+    </header>
+
+    <!-- SEÇÃO PRINCIPAL (HERO) -->
+    <main class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Projeto Social Nota 10</h1>
+                <h2>NAPBI - Núcleo de Atendimento Psicopedagógico Batista Independente</h2>
+                <p>Transformando vidas através de um olhar psicopedagógico. Oferecemos um acompanhamento dedicado para o desenvolvimento integral de crianças, adolescentes e suas famílias, com o rigor e a excelência que a sua jornada merece.</p>
+                <div class="cta-buttons">
+                    <a href="#contato" class="btn btn-primary">Fale Conosco</a>
+                    <a href="#ajudar" class="btn btn-secondary">Como Ajudar</a>
+                </div>
+            </div>
         </div>
-        <div class="card">
-          <i class="fas fa-user-graduate"></i>
-          <h3>Psicopedagogia</h3>
-          <p>Avaliações e acompanhamento individualizado.</p>
+    </main>
+
+    <!-- SEÇÃO SOBRE NÓS -->
+    <section class="section about-us" id="sobre">
+        <div class="container">
+            <h2>Nossa Missão</h2>
+            <p>No coração do Projeto Social Nota 10, o Núcleo de Atendimento Psicopedagógico Batista Independente nasceu com a missão de oferecer apoio especializado para a comunidade. Acreditamos que um bom diagnóstico e um acompanhamento cuidadoso são a base para superar os desafios de aprendizagem. Nossa equipe de profissionais qualificados trabalha com ética e empatia, pautada em valores cristãos, para promover o bem-estar e o potencial máximo de cada indivíduo.</p>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FAQ -->
-  <section id="faq">
-    <div class="container">
-      <h2>Perguntas Frequentes</h2>
-      <div class="faq-item">
-        <h3>Como funcionam as aulas?</h3>
-        <p>Adaptamos o conteúdo ao ritmo de aprendizado de cada aluno, garantindo compreensão e evolução constante.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Quem pode participar?</h3>
-        <p>Todos que sentirem dificuldades ou tenham interesse em aprender.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Como são feitas as avaliações psicopedagógicas?</h3>
-        <p>De forma individualizada, com relatórios detalhados e orientações personalizadas.</p>
-      </div>
-    </div>
-  </section>
+    <!-- SEÇÃO SERVIÇOS -->
+    <section class="section services" id="servicos">
+        <div class="container">
+            <h2>Intervenções Especializadas para o Desenvolvimento</h2>
+            <p>No NAPBI, nosso foco não é apenas em atividades, mas em um processo de desenvolvimento completo e personalizado. Nossas intervenções são cuidadosamente planejadas e baseadas em avaliações contínuas, utilizando uma abordagem **neuropsicopedagógica clínica e institucional**. Atuamos em diversas frentes para promover a aprendizagem e o bem-estar.</p>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3>Acompanhamento Psicopedagógico Individualizado</h3>
+                    <p>Com base em um diagnóstico aprofundado, desenvolvemos planos de intervenção individualizados para crianças, adolescentes e adultos. Nosso trabalho foca em áreas como a estimulação cognitiva, o desenvolvimento de habilidades sociais e a superação de dificuldades de aprendizagem.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Apoio Institucional</h3>
+                    <p>Oferecemos suporte e orientação para escolas, creches e outras instituições de ensino. Ajudamos a otimizar os processos de aprendizagem e a desenvolver estratégias pedagógicas mais eficazes para garantir um ambiente escolar inclusivo e acolhedor.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Especialização em TEA</h3>
+                    <p>Nosso núcleo possui expertise no Transtorno do Espectro Autista (TEA). Utilizamos métodos comprovados, como a **Análise do Comportamento Aplicada (ABA)**, **Método TEACCH** e **PECS**, para promover o desenvolvimento da comunicação, autonomia e interação social.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Reorganização Neurofuncional</h3>
+                    <p>Aplicamos o **Método Padovan de Reorganização Neurofuncional** para estimular e reabilitar as funções neuropsíquicas. Essa abordagem ajuda a reorganizar a base neurológica, favorecendo a aprendizagem e outras funções cognitivas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Contato -->
-  <section id="contato">
-    <div class="container">
-      <h2>Entre em Contato</h2>
-      <p>Agende uma aula ou avaliação pelo WhatsApp ou siga nosso Instagram!</p>
-      <div class="botoes-contato">
-        <a href="https://wa.me/5534996942062" target="_blank" class="botao whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-        <a href="https://www.instagram.com/latit_ude10" target="_blank" class="botao instagram"><i class="fab fa-instagram"></i> Instagram</a>
-      </div>
-      <p>📍 Rua Jorge Cauhy, 586 – Bairro Planalto – Uberlândia</p>
-      <p>📞 (34) 99694-2062 | ✉️ projetosocial.atitude10@gmail.com</p>
-    </div>
-  </section>
+    <!-- SEÇÃO METODOLOGIA -->
+    <section class="section methodology" id="metodologia">
+        <div class="container">
+            <h2>Nossa Metodologia</h2>
+            <p>No Núcleo de Atendimento Psicopedagógico, combinamos a expertise da **neuropsicopedagogia clínica e institucional** com métodos de intervenção comprovados, garantindo um acompanhamento completo e adaptado às necessidades de cada indivíduo. Nosso trabalho se baseia em uma abordagem multidisciplinar que integra diferentes técnicas para oferecer os melhores resultados.</p>
+            <div class="methodology-list">
+                <h3>Nossas Principais Técnicas de Intervenção</h3>
+                <ul>
+                    <li>**Método TEACCH:** Para estruturar o ambiente e as tarefas de forma visual e clara.</li>
+                    <li>**Análise do Comportamento Aplicada (ABA):** Focada em entender e modificar comportamentos.</li>
+                    <li>**PECS (Sistema de Comunicação por Troca de Figuras):** Um sistema de comunicação alternativa e aumentativa.</li>
+                    <li>**Método Padovan de Reorganização Neurofuncional:** Para estimular e reabilitar o sistema nervoso.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>© 2025 Projeto Social Atitude 10. Todos os direitos reservados.</p>
-    </div>
-  </footer>
+    <!-- SEÇÃO COMO AJUDAR -->
+    <section class="section help" id="ajudar">
+        <div class="container">
+            <h2>Junte-se a Nós e Faça a Diferença</h2>
+            <p>O Projeto Social Nota 10, através do NAPBI, existe para transformar vidas. Sua contribuição, seja ela qual for, nos ajuda a continuar oferecendo um atendimento de excelência para quem mais precisa. Veja como você pode fazer parte da nossa missão:</p>
+            <div class="help-options">
+                <div class="help-item">
+                    <h3>Doação Financeira</h3>
+                    <p>Sua doação financeira é investida diretamente na manutenção de nossas atividades e na aquisição de materiais de qualidade. Entre em contato para obter as informações bancárias e de transferência.</p>
+                </div>
+                <div class="help-item">
+                    <h3>Doação Material</h3>
+                    <p>Materiais de apoio são fundamentais para o nosso trabalho. Aceitamos doações de jogos pedagógicos, livros, materiais de papelaria e equipamentos que possam auxiliar no desenvolvimento. Entre em contato para saber sobre nossas necessidades atuais.</p>
+                </div>
+                <div class="help-item">
+                    <h3>Voluntariado</h3>
+                    <p>Seu tempo e dedicação são inestimáveis. Se você deseja fazer parte da nossa equipe de voluntários, entre em contato. Juntos, podemos fazer a diferença na vida de muitas famílias.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO CONTATO -->
+    <section class="section contact" id="contato">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <p>Se você busca um atendimento psicopedagógico profissional e personalizado, estamos aqui para ajudar. Fale conosco através dos canais abaixo.</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <a href="https://wa.me/5534996942062" target="_blank" class="contact-link">
+                        <img src="https://via.placeholder.com/48/80D7AF/26547C?text=W" alt="Ícone WhatsApp">
+                        <span>WhatsApp: (34) 99694-2062</span>
+                    </a>
+                </div>
+                <div class="contact-item">
+                    <a href="https://www.instagram.com/psicope_dagogia?igsh=OXBobjdzamVpMjVj" target="_blank" class="contact-link">
+                        <img src="https://via.placeholder.com/48/80D7AF/26547C?text=I" alt="Ícone Instagram">
+                        <span>Instagram: @psicope_dagogia</span>
+                    </a>
+                </div>
+                <div class="contact-item">
+                    <address>
+                        <p><strong>Endereço:</strong> Rua Jorge Cauhy, 586 - Bairro Planalto, Uberlândia - MG</p>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Projeto Social Nota 10. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
-
