@@ -73,12 +73,13 @@ h3 {
 .nav-menu ul {
     list-style: none;
     display: flex;
-    flex-wrap: nowrap; /* impede que os links quebrem linha */
-    overflow-x: auto;  /* adiciona rolagem horizontal se não couber */
+    flex-wrap: nowrap; /* impede quebra de linha */
+    overflow-x: auto;  /* permite rolagem horizontal se não couber */
+    -webkit-overflow-scrolling: touch; /* rolagem suave no iPhone */
 }
 
 .nav-menu ul li {
-    flex: 0 0 auto; /* mantém o tamanho do item sem encolher demais */
+    flex: 0 0 auto; /* mantém os itens lado a lado */
 }
 
 .nav-menu ul li a {
@@ -235,4 +236,26 @@ h3 {
     color: var(--light-neutral);
     text-align: center;
     padding: 20px 0;
+}
+
+/* --- CORREÇÃO FINAL PARA CELULAR: BLOQUEIA ROLAGEM LATERAL E AJUSTA LARGURA --- */
+html, body {
+    overflow-x: hidden !important;
+    width: 100%;
+    max-width: 100%;
+}
+
+.container, .header, .hero, .section {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.nav-menu ul {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.nav-menu ul li a {
+    white-space: nowrap;
 }
